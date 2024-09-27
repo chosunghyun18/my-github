@@ -3,7 +3,7 @@ package com.cho.system.infra.oauth2.dto;
 import java.util.Map;
 import lombok.Builder;
 import lombok.Getter;
-import travelfeeldog.member.domain.model.Member;
+import com.cho.system.member.domain.model.Member;
 
 @Getter
 public class OAuthAttributes {

@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import travelfeeldog.global.auth.jwt.service.JwtService;
-import travelfeeldog.global.common.dto.ApiResponse;
-import travelfeeldog.infra.oauth2.service.GoogleLoginService;
-import travelfeeldog.member.domain.model.Member;
+import com.cho.system.global.auth.jwt.service.JwtService;
+import com.cho.system.global.common.dto.ApiResponse;
+import com.cho.system.infra.oauth2.service.GoogleLoginService;
+import com.cho.system.member.domain.model.Member;
 
 @RestController
 @RequiredArgsConstructor

@@ -31,7 +31,7 @@ spring:
       maxLifetime: 1800000
       minimum-idle: 5 # 유휴 커넥션을 유지할 최소한의 커넥션 수 설정
       idle-timeout: 600000  # 유휴 커넥션의 최대 유지 시간 설정 (ms)
-      poolName: TravelFeelDogHikariCP
+      poolName: com.cho.systemHikariCP
       data-source-properties:
         dataSource.logWriter: # 로그 작성 구현체 지정
         dataSource.logUnclosedConnections: true  # 사용하지 않은 커넥션의 로깅 여부 지

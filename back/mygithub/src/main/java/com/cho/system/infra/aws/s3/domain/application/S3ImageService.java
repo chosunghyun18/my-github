@@ -3,6 +3,8 @@ package com.cho.system.infra.aws.s3.domain.application;
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.model.ObjectMetadata;
 import com.amazonaws.services.s3.model.PutObjectRequest;
+import com.cho.system.global.file.domain.application.ImageFileHandle;
+import com.cho.system.global.file.domain.application.ImageFileNameUtil;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -13,10 +15,8 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import travelfeeldog.global.file.domain.application.ImageFileHandle;
-import travelfeeldog.global.file.domain.application.ImageFileNameUtil;
-import travelfeeldog.global.file.domain.model.ImageFile;
-import travelfeeldog.infra.aws.s3.domain.model.S3Image;
+import com.cho.system.global.file.domain.model.ImageFile;
+import com.cho.system.infra.aws.s3.domain.model.S3Image;
 
 @Service
 public class S3ImageService implements ImageFileHandle {

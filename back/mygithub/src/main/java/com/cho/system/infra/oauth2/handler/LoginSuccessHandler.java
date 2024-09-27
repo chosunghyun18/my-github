@@ -10,7 +10,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationSuccessHandler;
 import org.springframework.web.util.UriComponentsBuilder;
-import travelfeeldog.global.auth.jwt.service.JwtService;
+import com.cho.system.global.auth.jwt.service.JwtService;
 
 @RequiredArgsConstructor
 @Slf4j

@@ -12,9 +12,9 @@ import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import travelfeeldog.infra.oauth2.dto.OAuthAttributes;
-import travelfeeldog.member.application.service.MemberWriteService;
-import travelfeeldog.member.domain.model.Member;
+import com.cho.system.infra.oauth2.dto.OAuthAttributes;
+import com.cho.system.member.application.service.MemberWriteService;
+import com.cho.system.member.domain.model.Member;
 
 @RequiredArgsConstructor
 @Service

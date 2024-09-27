@@ -1,9 +1,9 @@
 package com.cho.system.infra.aws.s3.domain.model;
 
+import com.cho.system.global.file.domain.model.ImageFile;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
-import travelfeeldog.global.file.domain.model.ImageFile;
 
 @Getter
 @NoArgsConstructor
