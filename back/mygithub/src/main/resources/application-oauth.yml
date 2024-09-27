@@ -1,0 +1,33 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google-web-test:
+            provider: google
+            redirect-uri: ${Google_Client_REDIRECT_URI_TEST_WEB}
+            client-id: ${Google_WEB_Client_Id_TEST_WEB}
+            client-secret: ${Google_Client_Secret_TEST_WEB}
+            scope:
+              - email
+              - profile
+          google-mobile:
+            provider: google
+            client-id: ${Google_ANDROID_Client_Id}
+            scope:
+              - email
+              - profile
+          google-web-react:
+            provider: google
+            redirect-uri: ${Google_Client_REDIRECT_URI_REACT_WEB}
+            client-id: ${Google_WEB_Client_Id_REACT_WEB}
+            client-secret: ${Google_Client_Secret_REACT_WEB}
+            scope:
+              - email
+              - profile
+
+# request login url : http://localhost:8080/login/web/oauth2/google-web-test
+# success login url :  http://localhost:8080/login/web/oauth2/code/google
+
+# request login url : http://localhost:8080/oauth2/authorization/google
+# success login url :  http://localhost:8080/login/oauth2/code/google

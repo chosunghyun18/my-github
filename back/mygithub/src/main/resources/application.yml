@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force: true
+
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: local
+    include:
+      - credentials
+      - jwt
+      - oauth

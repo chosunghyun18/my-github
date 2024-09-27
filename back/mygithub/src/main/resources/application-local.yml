@@ -1,0 +1,61 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      force: true
+
+spring:
+  cache:
+    type: redis
+    redis:
+      time-to-live: 3600 # 데이터 유지 시간(sec)
+      cache-null-values: true # null 캐싱 여부
+      host: localhost
+      port: 6379
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/MY_GIT_HUB?characterEncoding=UTF-8
+    username: root
+    password: Kris2486!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      connectionTimeout: 30000
+      maximumPoolSize: 10
+      maxLifetime: 1800000
+      minimum-idle: 5 # 유휴 커넥션을 유지할 최소한의 커넥션 수 설정
+      idle-timeout: 600000  # 유휴 커넥션의 최대 유지 시간 설정 (ms)
+      poolName: MyGitHuBHikariCP
+      data-source-properties:
+        dataSource.logWriter: # 로그 작성 구현체 지정
+        dataSource.logUnclosedConnections: true  # 사용하지 않은 커넥션의 로깅 여부 지
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.spatial.dialect.mysql.MySQL8SpatialDialect
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        default_batch_fetch_size: 500
+        dialect: org.hibernate.dialect.MySQLDialect
+    generate-ddl: false
+    defer-datasource-initialization: false
+    open-in-view: false
+
+#  metrics:
+#    enabled: true  # HikariCP 메트릭스 활성화
+#    export:
+#      reporter:
+#        - prometheus  # 사용할 메트릭스 리포터 설정
+#      prometheus:
+#        enabled: true  # Prometheus 메트릭스 리포터 활성화 여부
+#        step: 60s  # 측정 간격
+
+logging:
+  level:
+    com.zaxxer.hikari: DEBUG
+    org.hibernate:
+      SQL: debug
+      type: trace
+      springframework:
+        core.LocalVariableTableParameterNameDiscoverer : error
