@@ -6,11 +6,9 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
-import com.cho.system.global.file.domain.model.ImageFile;
-import com.cho.system.global.file.dto.ImageDtos.ImageDto;
 import com.cho.system.global.file.infrastructure.GlobalImageRepository;
 
-@Transactional
+
 @Service
 public class GlobalImageFileService {
 
@@ -18,7 +16,6 @@ public class GlobalImageFileService {
 
     ImageFileService imageFileService;
 
-    @Transactional(readOnly = true)
     public ImageDto getGlobalImageFileById(Long id) {
         ImageFile imageFile = globalImageRepository.findById(id)
             .orElseThrow(() -> new IllegalArgumentException("Image not found for id: " + id));
