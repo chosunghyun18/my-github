@@ -6,8 +6,6 @@
 
 - FliperNote for ios
 
----
-
 ### shorts source finder - Web,Mobile,AI
 
 - 유투브 쇼츠를 보면 영화의 장면을 올리는 쇼츠가 많다.
@@ -70,3 +68,7 @@
 - gps 로 찍어둔 위치가 아니면 계속 울리는 앱 or 지정된 위치에 있다면 계속 울리는 앱
 
 - 예, 7시 출근을 지정 >> gps 위치상 같으면 계속 알림이 울림
+
+### AI agent payment module service
+
+- AI agent 가 쉽게 결재 가능하게 하는 api 서비스 개발
